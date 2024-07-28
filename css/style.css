@@ -234,6 +234,10 @@ button:hover {
     background-color: #F1CDB3;
 }
 
+.main{
+    flex: 1 0 auto
+}
+
 .about__inner {
     display: flex;
     align-items: center;
@@ -358,6 +362,14 @@ button:hover {
     color: #CDCDCD;
 }
 
+.pagination__button span{
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+
 .help__inner {
     text-align: center;
 }
@@ -435,6 +447,7 @@ button:hover {
 .footer {
     background: url(/images/icons/noise_transparent@2x.svg), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-position: center;
+    flex: 0 0 auto;
 }
 
 .footer .container {
