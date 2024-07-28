@@ -235,7 +235,7 @@ button:hover {
 }
 
 .main{
-    flex: 1 0 auto
+    flex: 1 0 auto;
 }
 
 .about__inner {
