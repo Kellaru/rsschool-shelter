@@ -333,6 +333,7 @@ button:hover {
     border-radius: 9px 9px 0px 0px;
     padding-bottom: 30px;
     align-self: start;
+    display: block;
 }
 
 .card__pagination {
