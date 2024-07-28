@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cozy House: Shelter for pets in Boston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header header__OurFriends">
+      <!--Возможно, стоит все обернуть в секцию: <section><header></header><start></start></section>-->
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a href="#">
+              <h1 class="header__title">Cozy House</h1>
+              <p>Shelter for pets in Boston</p>
+            </a>
+          </div>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="main.html">About the shelter</a></li>
+              <li class="menu__item menu__item_disabled"><a href="pets.html" aria-disabled="true">Our pets</a></li>
+              <li class="menu__item"><a href="main.html#help">Help the shelter</a></li>
+              <li class="menu__item"><a href="#contacts">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="OurFriends" id="OurFriends-list">
+        <div class="container">
+          <div class="OurFriends__inner">
+            <div class="OurFriends__title">
+              <h3>Our friends who are looking for a house</h3>
+            </div>
+            <div class="OurFriends__cards">
+              <div class="OurFriends__card">
+                <img src="/images/pets-katrine.jpg" alt="">
+                <p>Katrine</p>
+                <button>Learn more</button>
+              </div>
+              <div class="OurFriends__card">
+                <img src="/images/pets-jennifer.jpg" alt="">
+                <p>Jennifer</p>
+                <button>Learn more</button>
+              </div>
+              <div class="OurFriends__card">
+                <img src="/images/pets-woody.jpg" alt="">
+                <p>Woody</p>
+                <button>Learn more</button>
+              </div>
+              <div class="OurFriends__card">
+                <img src="/images/pets-Sophia.jpg" alt="">
+                <p>Sophia</p>
+                <button>Learn more</button>
+              </div>
+              <div class="OurFriends__card">
+                <img src="/images/pets-timmy.jpg" alt="">
+                <p>Timmy</p>
+                <button>Learn more</button>
+              </div>
+              <div class="OurFriends__card">
+                <img src="/images/pets-charly.jpg" alt="">
+                <p>Charly</p>
+                <button>Learn more</button>
+              </div>
+              <div class="OurFriends__card">
+                <img src="/images/pets-scarlet.jpg" alt="">
+                <p>Scarlett</p>
+                <button>Learn more</button>
+              </div>
+              <div class="OurFriends__card">
+                <img src="/images/pets-Freddie.jpg" alt="">
+                <p>Freddie</p>
+                <button>Learn more</button>
+              </div>
+            </div>
+            <div class="card__pagination">
+              <button class="pagination__button" disabled>
+                <h4>&lt;&lt;</h4>
+              </button>
+              <button class="pagination__button" disabled>
+                <h4>&lt;</h4>
+              </button>
+              <button class="pagination__button pagination__button_active">
+                <h4>1</h4>
+              </button>
+              <button class="pagination__button">
+                <h4>&gt;</h4>
+              </button>
+              <button class="pagination__button">
+                <h4>&gt;&gt;</h4>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__contacts">
+            <h3 class="footer__contacts-title">For questions and suggestions</h3>
+            <div class="contacts__email">
+              <img src="./images/mail.svg" alt="">
+              <h4>email@shelter.com</h4>
+            </div>
+            <div class="contacts__phone">
+              <img src="./images/phone.svg" alt="">
+              <h4>+13 674 567 75 54</h4>
+            </div>
+          </div>
+          <div class="footer__address">
+            <h3 class="footer__address-title">We are waiting for your visit</h3>
+            <div class="address1">
+              <img src="./images/pin.svg" alt="">
+              <h4>1 Central Street, Boston (entrance from the store)</h4>
+            </div>
+            <div class="address2">
+              <img src="./images/pin.svg" alt="">
+              <h4>18 South Park, London </h4>
+            </div>
+          </div>
+          <div class="footer__img">
+            <img src="./images/footer__image.png" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
