@@ -251,6 +251,10 @@ a{
     column-gap: 120px;
 }
 
+.about__image img{
+    display: block;
+}
+
 .about__title {
     align-items: center;
 }
