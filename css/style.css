@@ -363,6 +363,13 @@ a{
     pointer-events: none;
 }
 
+
+.pagination__button_active {
+    cursor: default;
+    pointer-events: none;
+    background-color: #F1CDB3;
+}
+
 .pagination__button:disabled(:hover) {
     background-color: transparent;
 }
