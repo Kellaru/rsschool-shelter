@@ -294,7 +294,7 @@ a{
 
 .slider__arrow {
     align-self: center;
-    padding: 13px 17px;
+    padding: 13px 15px;
 }
 
 .slider__arrow_left {
@@ -361,6 +361,13 @@ a{
     border: 2px #CDCDCD solid;
     cursor: default;
     pointer-events: none;
+}
+
+
+.pagination__button_active {
+    cursor: default;
+    pointer-events: none;
+    background-color: #F1CDB3;
 }
 
 .pagination__button:disabled(:hover) {
