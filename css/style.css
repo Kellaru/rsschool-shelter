@@ -317,7 +317,7 @@ a{
 .OurFriends__card {
     padding-bottom: 30px;
     background-color: #FAFAFA;
-    border-radius: 9px 9px 0px 0px;
+    border-radius: 9px;
 }
 
 .OurFriends__card:hover {
