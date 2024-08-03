@@ -30,7 +30,7 @@ body {
 
 .wrapper {
     min-height: 100%;
-    min-width: 1280px; /*Убрать при адаптиве */
+    /*    min-width: 1280px; Убрать при адаптиве */
     display: flex;
     flex-direction: column;
 }
@@ -54,26 +54,23 @@ h6 {
 
 h1 {
     font-size: 32px;
-    line-height: 35.2px;
+    line-height: 36px;
     letter-spacing: 0.06em;
 }
 
 h2 {
-    font-size: 44px;
-    line-height: 57px;
-}
-
-h3 {
     font-size: 35px;
     line-height: 45.5px;
     letter-spacing: 0.06em;
 }
 
-h4 {
+h3 {
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.06em;
 }
+
+h4 {}
 
 h5 {
     font-size: 15px;
@@ -86,7 +83,7 @@ h5 {
     font-family: Georgia;
     font-weight: 400;
     font-size: 17px;
-    line-height: 22.1px;
+    line-height: 22px;
     letter-spacing: 0.06em;
     border-radius: 100px;
     border: 2px #F1CDB3 solid;
@@ -103,11 +100,11 @@ h5 {
     background-color: #FDDCC4;
 }
 
-a{
+a {
     transition: 0.3s;
 }
 
-.header{
+.header {
     z-index: 0;
 }
 
@@ -122,7 +119,7 @@ a{
 }
 
 .header__logo-main .header__title {
-    padding-bottom: 10px;
+    padding-bottom: 9px;
     color: #F1CDB3;
 }
 
@@ -133,13 +130,13 @@ a{
 .header__logo-main p,
 .header__logo p {
     font-size: 13px;
-    line-height: 14.95px;
+    line-height: 15px;
     letter-spacing: 0.1em;
     padding-left: 4px;
 }
 
 .header__logo .header__title {
-    padding-bottom: 10px;
+    padding-bottom: 9px;
 }
 
 .header__logo p {
@@ -149,14 +146,16 @@ a{
 .menu__list-main {
     display: flex;
     color: #CDCDCD;
+    padding-bottom: 4px;
 }
 
 .menu__list {
     display: flex;
+    padding-bottom: 4px;
 }
 
 .menu__item {
-    padding-right: 35px;
+    padding-right: 36px;
 }
 
 .menu__item:last-child {
@@ -215,6 +214,7 @@ a{
     max-width: 100%;
     height: auto;
     align-self: flex-end;
+    min-width: 260px;
 }
 
 .start__titleBox {
@@ -229,18 +229,24 @@ a{
 .start__title {
     color: #FFFFFF;
     max-width: 310px;
+    font-size: 44px;
+    line-height: 57.2px;
+    letter-spacing: normal;
+    padding-bottom: 41px;
+    padding-top: 1px;
 }
 
 .start__titleBox p {
     color: #CDCDCD;
-    padding: 42px 0;
+    padding-bottom: 42px;
 }
 
-.start__button, .OurFriends__button {
+.start__button,
+.OurFriends__button {
     background-color: #F1CDB3;
 }
 
-.main{
+.main {
     flex: 1 0 auto;
 }
 
@@ -249,10 +255,10 @@ a{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 120px;
+    gap: 80px 120px;
 }
 
-.about__image img{
+.about__image img {
     display: block;
 }
 
@@ -260,14 +266,18 @@ a{
     align-items: center;
 }
 
-.about__title h3 {
+.about__title h2 {
     max-width: 370px;
+    padding-bottom: 25px;
 }
 
 .about__title p {
     color: #4C4C4C;
-    padding-top: 25px;
     max-width: 430px;
+}
+
+.about__title p:first-of-type {
+    padding-bottom: 25px;
 }
 
 .OurFriends {
@@ -281,11 +291,15 @@ a{
 .OurFriends__title {
     display: inline-block;
     max-width: 400px;
+    height: 90px;
+    /*костыль*/
+
 }
 
 .OurFriends__slider {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 0 53px;
 }
 
 .OurFriends__cards,
@@ -300,6 +314,10 @@ a{
 .slider__arrow {
     align-self: center;
     padding: 13px 15px;
+    width: 52px;
+    /*костыль*/
+    height: 52px;
+    /*костыль*/
 }
 
 .slider__arrow_left {
@@ -332,12 +350,7 @@ a{
     border: 2px #FDDCC4 solid;
 }
 
-.OurFriends__card p {
-    font-family: Georgia;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 22.72px;
-    letter-spacing: 0.06em;
+.OurFriends__card h3 {
     text-align: center;
     padding-bottom: 30px;
 }
@@ -356,12 +369,15 @@ a{
 }
 
 .pagination__button {
-    padding: 11px; /*костыль*/
-    height: 52px; /*костыль*/
-    width: 52px; /*костыль*/
+    padding: 11px;
+    /*костыль*/
+    height: 52px;
+    /*костыль*/
+    width: 52px;
+    /*костыль*/
 }
 
-.pagination__button_disabled{
+.pagination__button_disabled {
     color: #CDCDCD;
     border: 2px #CDCDCD solid;
     cursor: default;
@@ -375,7 +391,7 @@ a{
     background-color: #F1CDB3;
 }
 
-.pagination__button span{
+.pagination__button span {
     font-family: Georgia;
     font-weight: 400;
     font-size: 20px;
@@ -390,6 +406,8 @@ a{
 .help__title {
     display: inline-block;
     max-width: 310px;
+    height: 90px;
+    /*костыль*/
 }
 
 .help__list {
@@ -398,7 +416,8 @@ a{
     flex-wrap: wrap;
     gap: 55px 120px;
     padding-top: 60px;
-    margin: 0 auto; /*Скорее костыль.*/
+    margin: 0 auto;
+    /*Скорее костыль.*/
 }
 
 .help__list-item {
@@ -407,7 +426,7 @@ a{
     align-items: center;
 }
 
-.help__list-item h4 {
+.help__list-item h3 {
     padding-top: 30px;
 }
 
@@ -423,6 +442,10 @@ a{
     gap: 30px;
 }
 
+.donation__image img {
+    display: block;
+}
+
 .donation__info {
     max-width: 380px;
 }
@@ -435,21 +458,23 @@ a{
 
 }
 
-.donation__info a:hover{
+.donation__info a:hover {
     background-color: #FDDCC4;
 
 }
 
 
-.donation__info h5 {
+.donation__info h4 {
     padding-bottom: 20px;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
 }
 
 .donation__title {
     max-width: 300px;
     padding-bottom: 20px;
 }
-
 
 .donation__card-number {
     padding-left: 15px;
@@ -461,6 +486,10 @@ a{
     line-height: 18px;
     padding-top: 20px;
     color: #B2B2B2;
+}
+
+.donation__info a {
+    align-items: center;
 }
 
 .footer {
@@ -503,20 +532,21 @@ a{
 .address1,
 .address2 {
     display: flex;
-    column-gap: 20px; 
+    column-gap: 20px;
+    align-items: center;
 }
 
-.contacts__email h4,
-.contacts__phone h4,
-.address1 h4,
-.address2 h4 {
+.contacts__email h3,
+.contacts__phone h3,
+.address1 h3,
+.address2 h3 {
     color: #F1CDB3;
 }
 
-.contacts__email h4 :hover,
-.contacts__phone h4 :hover,
-.address1 h4 :hover,
-.address2 h4 :hover{
+.contacts__email :hover,
+.contacts__phone :hover,
+.address1 :hover,
+.address2 :hover {
     color: #FFFFFF;
 }
 
@@ -531,22 +561,419 @@ a{
     padding-top: 16px;
 }
 
-.footer__img img{
+.footer__img img {
     display: block;
 }
 
 .contacts__email img {
-    width: 40px; height: auto;
+    width: 40px;
+    height: auto;
 }
 
 .contacts__phone img {
-    width: 40px; height: auto;
+    width: 40px;
+    height: auto;
 }
 
 .address1 img {
-    width: 22px; height: auto;
+    width: 22px;
+    height: auto;
 }
 
 .address2 img {
-    width: 22px; height: auto;
+    width: 22px;
+    height: auto;
+}
+
+
+
+@media (max-width: 1279px) {
+
+    .OurFriends__card-main:last-child {
+        display: none;
+    }
+
+    .footer__inner {
+        gap: 65px 60px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 80px 30px 100px;
+    }
+
+    .about {}
+
+    .about__inner {
+        flex-wrap: wrap-reverse;
+        row-gap: 80px;
+        align-items: center;
+    }
+
+    .OurFriends__slider {
+        gap: 0 12px;
+    }
+
+    .slider__items {
+        gap: 0 40px;
+    }
+
+    .donation__inner {
+        flex-wrap: wrap-reverse;
+        gap: 60px 30px;
+    }
+
+    .donation__image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .help__list {
+        gap: 50px 60px;
+    }
+
+    .help__list-item h3 {
+        width: 170px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+
+
+    .header .container {
+        padding: 30px;
+    }
+
+    .start .container {
+        padding: 30px 30px 0 30px;
+    }
+
+    .start__inner {
+        flex-direction: column;
+    }
+
+    .start__image {
+        max-width: 569px;
+        align-self: end;
+        padding-left: 0;
+    }
+
+    .start__titleBox {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .start__titleBox a {
+        align-self: center;
+    }
+
+
+
+    .OurFriends__slider {
+        gap: 0 12px;
+    }
+
+    .slider__items {
+        gap: 0 40px;
+    }
+
+    .OurFriends__card-main:last-child {
+        display: none;
+    }
+
+    /*    .OurFriends__card:nth-last-child(-n+2) {
+        display: none;
+    } */
+
+
+
+
+    .footer .container {
+        padding: 30px 30px 0 30px;
+    }
+
+    .footer__inner {
+        gap: 65px 60px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .menu {
+        display: none;
+    }
+
+    .OurFriends__card-main:nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .help__list {
+        gap: 30px 30px;
+    }
+
+    .help__list-item h3 {
+        width: 130px;
+    }
+
+    .footer__inner {
+        gap: 40px 60px;
+    }
+}
+
+
+
+
+@media (max-width: 425px) {
+
+    h1 {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 0.06em;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 15px;
+        line-height: 16.5px;
+        letter-spacing: 0.06em;
+    }
+
+    .container {
+        padding: 42px 10px;
+    }
+
+    .start__title{
+        font-size: 25px;
+        line-height: 32.5px;
+        letter-spacing: 0.06em;
+        text-align: center; 
+    }
+
+    .OurFriends__slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 85px;
+        padding-bottom: 42px;
+
+    }
+
+    .slider__arrow_left {
+        order: 1;
+    }
+
+    .slider__arrow_right {
+        order: 2;
+    }
+
+    .help .container {
+        padding: 42px 15px;
+    }
+
+    .help__list {
+        gap: 30px 30px;
+    }
+
+    .help__list-item h3 {
+        width: 130px;
+        font-size: 15px;
+        line-height: 16.5px;
+        letter-spacing: 0.06em;
+    }
+
+    .donation__card-number {
+        font-size: 15px;
+        line-height: 16.5px;
+        letter-spacing: 0.06em;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+
+    html,
+    body {}
+
+    .wrapper {
+        min-width: 320px;
+    }
+
+    .container {
+        padding: 42px 10px;
+    }
+
+    .header .container {
+        padding: 30px 20px;
+    }
+
+    .start .container {
+        padding: 30px 10px 0;
+    }
+
+    .start__inner {
+        flex-direction: column;
+    }
+
+    .start__image {
+        max-width: 260px;
+        align-self: end;
+    }
+
+    .start__titleBox {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .start__titleBox a {
+        align-self: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .about__inner {
+        flex-wrap: wrap-reverse;
+        row-gap: 80px;
+        align-items: center;
+    }
+
+
+
+    .about__title h3 {
+        width: auto;
+        text-align: center;
+    }
+
+    .about__title p {
+        width: auto;
+        text-align: justify;
+        padding: 0 15px;
+    }
+
+    .about__image img {
+        max-width: 260px;
+        height: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .OurFriends__slider {
+        gap: 0 80px;
+
+    }
+
+    .OurFriends__title {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+    }
+
+    .slider__items {
+        gap: 0 90px;
+        padding-bottom: 20px;
+    }
+
+    .OurFriends__cards {
+        gap: 30px 40px;
+    }
+
+    .OurFriends__card:nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .OurFriends__inner form {
+        padding-top: 42px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .help .container {
+        padding: 42px 15px;
+    }
+
+    .help__list {
+        gap: 30px 30px;
+        justify-content: start;
+    }
+
+    .help__list-item h3 {
+        width: 130px;
+    }
+
+    .donation__inner {
+        flex-wrap: wrap-reverse;
+        gap: 60px 0;
+    }
+
+    .donation__image img {
+        width: 260px;
+        height: auto;
+    }
+
+    .footer .container {
+        padding: 30px 10px 0;
+    }
+
+    .footer__inner {
+        gap: 65px 60px;
+    }
+
+
 }
