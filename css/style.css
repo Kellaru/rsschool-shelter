@@ -39,7 +39,6 @@ body {
     padding: 80px 40px 100px 40px;
     max-width: 1280px;
     margin: 0 auto;
-
 }
 
 h1,
@@ -60,7 +59,7 @@ h1 {
 
 h2 {
     font-size: 35px;
-    line-height: 45.5px;
+    line-height: 45px;
     letter-spacing: 0.06em;
 }
 
@@ -215,6 +214,7 @@ a {
     height: auto;
     align-self: flex-end;
     min-width: 260px;
+    pointer-events: none;
 }
 
 .start__titleBox {
@@ -230,15 +230,15 @@ a {
     color: #FFFFFF;
     max-width: 310px;
     font-size: 44px;
-    line-height: 57.2px;
+    line-height: 57px;
     letter-spacing: normal;
-    padding-bottom: 41px;
-    padding-top: 1px;
+    padding-bottom: 42px;
 }
 
 .start__titleBox p {
     color: #CDCDCD;
     padding-bottom: 42px;
+    max-width: 460px;
 }
 
 .start__button,
@@ -280,34 +280,46 @@ a {
     padding-bottom: 25px;
 }
 
+.OurFriends-main,
 .OurFriends {
     background-color: #F6F6F6;
 }
 
+.OurFriends__inner-main,
 .OurFriends__inner {
     text-align: center;
 }
 
+.OurFriends__title-main,
 .OurFriends__title {
     display: inline-block;
     max-width: 400px;
     height: 90px;
     /*костыль*/
-
 }
 
 .OurFriends__slider {
     display: flex;
     justify-content: center;
     gap: 0 53px;
+    padding: 60px 0;
+
 }
 
-.OurFriends__cards,
-.slider__items {
+.slider__items,
+.OurFriends__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
+}
+
+.slider__items {
+    gap: 0 90px;
+}
+
+.OurFriends__cards {
+    gap: 30px 40px;
     padding: 60px 0;
 }
 
@@ -322,14 +334,6 @@ a {
 
 .slider__arrow_left {
     transform: rotate(180deg);
-}
-
-.slider__items {
-    gap: 0 90px;
-}
-
-.OurFriends__cards {
-    gap: 30px 40px;
 }
 
 .OurFriends__card {
@@ -383,7 +387,6 @@ a {
     cursor: default;
     pointer-events: none;
 }
-
 
 .pagination__button_active {
     cursor: default;
@@ -455,19 +458,16 @@ a {
     border-radius: 9px;
     background-color: #F1CDB3;
     display: inline-flex;
-
 }
 
 .donation__info a:hover {
     background-color: #FDDCC4;
-
 }
-
 
 .donation__info h4 {
     padding-bottom: 20px;
     font-size: 15px;
-    line-height: 16px;
+    line-height: 17px;
     letter-spacing: 0.06em;
 }
 
@@ -519,11 +519,14 @@ a {
 
 .footer__contacts-title {
     color: #FFFFFF;
-    padding-top: 16px;
 }
 
 .address1,
 .address2 {
+    position: relative;
+    /*Йо-хо-хо, как же это плохо. Обнять и плакать. Спасибо макету за это. Нужно было по своему делать изначально.*/
+    right: 1px;
+    /*А с другой стороны неплохое обучение.*/
     padding-top: 33px;
 }
 
@@ -558,6 +561,11 @@ a {
 .footer__address-title {
     color: #FFFFFF;
     max-width: 270px;
+
+}
+
+.footer__contacts-title,
+.footer__address-title {
     padding-top: 16px;
 }
 
@@ -589,12 +597,16 @@ a {
 
 @media (max-width: 1279px) {
 
-    .OurFriends__card-main:last-child {
+    .slider__items .OurFriends__card:last-child {
         display: none;
     }
 
     .footer__inner {
         gap: 65px 60px;
+    }
+
+    .OurFriends__cards .OurFriends__card:nth-last-child(-n+2) {
+        display: none;
     }
 }
 
@@ -631,7 +643,7 @@ a {
     }
 
     .help__list {
-        gap: 50px 60px;
+        gap: 55px 60px;
     }
 
     .help__list-item h3 {
@@ -667,13 +679,12 @@ a {
         display: flex;
         flex-direction: column;
         padding-right: 0;
+        padding-bottom: 100px;
     }
 
     .start__titleBox a {
         align-self: center;
     }
-
-
 
     .OurFriends__slider {
         gap: 0 12px;
@@ -683,16 +694,28 @@ a {
         gap: 0 40px;
     }
 
-    .OurFriends__card-main:last-child {
-        display: none;
+
+
+    .OurFriends .container {
+        padding: 60px 30px 70px 30px;
     }
 
-    /*    .OurFriends__card:nth-last-child(-n+2) {
-        display: none;
-    } */
+    .OurFriends__title {
+        margin: 20px 0 30px 0;
+    }
 
+    .OurFriends__cards {
+        padding: 0;
+    }
 
+    .card__pagination {
+        margin: 40px 0 6px 0;
+    }
 
+    .donation__image img {
+        padding-right: 1px;
+        /*Опора при ходьбе. На самом деле нужно просто для блока переделать контейнер. Но так проще, наверное*/
+    }
 
     .footer .container {
         padding: 30px 30px 0 30px;
@@ -702,16 +725,27 @@ a {
         gap: 65px 60px;
     }
 
+
+
+    .footer__contacts-title,
+    .footer__address-title {
+        padding-top: 0;
+    }
 }
 
 
 @media (max-width: 767px) {
 
-    .menu {
+    .menu__list,
+    .menu__list-main {
         display: none;
     }
 
-    .OurFriends__card-main:nth-last-child(-n+2) {
+    .slider__items .OurFriends__card:nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .OurFriends__cards .OurFriends__card:nth-last-child(-n+5) {
         display: none;
     }
 
@@ -726,6 +760,48 @@ a {
     .footer__inner {
         gap: 40px 60px;
     }
+
+
+
+
+    .burger {
+        position: relative;
+    }
+
+    .burger span,
+    .burger span::before,
+    .burger span::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        right: 0px;
+        background-color: #000000;
+    }
+
+    .burger-main span,
+    .burger-main span::before,
+    .burger-main span::after {
+        background-color: #F1CDB3;
+    }
+
+
+    .burger span {
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    .burger span::before {
+        top: -10px;
+    }
+
+    .burger span::after {
+        top: 10px;
+    }
+
+
+
+
 }
 
 
@@ -763,11 +839,11 @@ a {
         padding: 42px 10px;
     }
 
-    .start__title{
+    .start__title {
         font-size: 25px;
         line-height: 32.5px;
         letter-spacing: 0.06em;
-        text-align: center; 
+        text-align: center;
     }
 
     .OurFriends__slider {
@@ -805,6 +881,10 @@ a {
         font-size: 15px;
         line-height: 16.5px;
         letter-spacing: 0.06em;
+    }
+
+    .card__pagination {
+        column-gap: 10px;
     }
 }
 
