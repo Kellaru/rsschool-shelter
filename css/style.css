@@ -924,6 +924,7 @@ a {
         display: flex;
         flex-direction: column;
         text-align: center;
+        padding-bottom: 105px;
     }
 
     .start__titleBox a {
@@ -948,7 +949,7 @@ a {
 
     .about__inner {
         flex-wrap: wrap-reverse;
-        row-gap: 80px;
+        row-gap: 42px;
         align-items: center;
     }
 
@@ -965,6 +966,10 @@ a {
         padding: 0 15px;
     }
 
+    .about__title p:first-of-type {
+        padding-bottom: 22px;
+    }
+
     .about__image img {
         max-width: 260px;
         height: auto;
@@ -977,18 +982,22 @@ a {
 
 
 
+ .OurFriends .container{
+    padding: 42px 10px;
+ }
 
+ .OurFriends__title {
+    margin: 0;
+}
 
-
-
-    .OurFriends__slider {
+    .OurFriends__slider, .OurFriends__cards {
         gap: 0 80px;
-
+        padding: 42px 0;
     }
 
+    .OurFriends__title-main,
     .OurFriends__title {
-        display: inline-block;
-        width: auto;
+        height: 0;
         text-align: center;
     }
 
@@ -1009,8 +1018,9 @@ a {
         padding-top: 42px;
     }
 
-
-
+    .card__pagination {
+        margin: 0;
+    }
 
 
 
@@ -1028,32 +1038,90 @@ a {
         padding: 42px 15px;
     }
 
+    .help__title {
+        height: 0;
+
+    }
+
     .help__list {
         gap: 30px 30px;
         justify-content: start;
+        padding-top: 42px;
     }
 
     .help__list-item h3 {
         width: 130px;
+        padding-top: 20px;
+
     }
+
+    .help__list-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+
+
+
+
+
 
     .donation__inner {
         flex-wrap: wrap-reverse;
-        gap: 60px 0;
+        gap: 42px 0;
+        text-align: center;
     }
 
     .donation__image img {
         width: 260px;
         height: auto;
     }
+    
+    .donation__info h4 {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: normal;
+    }
+.donation__info p {
+padding: 20px 10px 0 10px;
+text-align: justify;
+}
 
     .footer .container {
         padding: 30px 10px 0;
     }
 
     .footer__inner {
-        gap: 65px 60px;
+        gap: 40px 60px;
+
     }
 
+.footer__contacts a{
+    justify-content: center;
+}
+
+
+
+.footer__address-title{
+padding: 0 25px;
+    max-width:fit-content;
+}
+
+    .address1, .address2 {
+    position: relative;
+    right: 0px;
+    padding-top: 40px;
+}
+
+.address1 h3, .address2 h3 {
+    text-align: left;
+}
+
+.footer__img img{
+    max-width: 260px;
+    height: auto;
+}
 
 }
